@@ -1,0 +1,198 @@
+
+
+GET /e-commerce-jaxrs/api/admins/3 HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+
+
+
+###
+
+PUT /e-commerce-jaxrs/api/admins/3 HTTP/1.1
+Host: localhost:9595
+Content-Type: application/json
+
+{
+	"name":"mohamed alaa",
+	"dateOfBirth":"1995-02-28"
+}
+
+###
+
+
+
+GET /e-commerce-jaxrs/api/products/2 HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+###
+POST  /e-commerce-jaxrs/api/products HTTP/1.1
+Host: localhost:9595
+Content-Type: application/json
+
+{
+	"name" :"iphone7+",
+	"decription" :"new iphone7+",
+	"price" :7000,
+	"category" :"1",
+	"image" :"image3.png",
+	"quantity" :25
+}
+
+###
+
+GET /e-commerce-jaxrs/api/products HTTP/1.1
+Host: localhost:9595
+Accept: application/xml
+
+
+
+###
+DELETE  /e-commerce-jaxrs/api/products/2 HTTP/1.1
+HOST:localhost:9595
+Content-Type: application/json 
+
+###
+GET /e-commerce-jaxrs/api/categories HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+###
+GET /e-commerce-jaxrs/api/categories/2 HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+###
+GET /e-commerce-jaxrs/api/categories/1/products HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+LoginId: b5afb970-f142-46aa-b2ca-a9f3578f96e7
+###
+GET /e-commerce-jaxrs/api/clerks HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+###
+GET /e-commerce-jaxrs/api/clerks/2 HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+###
+PUT	/e-commerce-jaxrs/api/clerks/2 HTTP/1.1
+Host: localhost:9595
+Content-Type:application/json
+
+{
+	
+	"name":"hamada",
+	"email":"hamada@gmail.com",
+	"password":"99999999",
+	"role":"clerk"
+}
+
+###
+DELETE /e-commerce-jaxrs/api/clerks/4 HTTP/1.1
+Host: localhost:9595
+Content-Type:  application/json
+###
+POST /e-commerce-jaxrs/api/customers HTTP/1.1
+Host: localhost:9595
+Content-Type:application/json
+
+{
+	
+	"name":"hamada",
+	"email":"hamada@gmail.com",
+	"password":"99999999"
+	
+}
+###
+GET /e-commerce-jaxrs/api/customers/1 HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+LoginId: 8038688d-621a-4cdb-bab3-d560e51d234d
+###
+POST /e-commerce-jaxrs/api/login HTTP/1.1
+Host: localhost:9595
+Content-Type:application/json
+
+{
+	"email" :"alaa@gmail.com",
+	"password" :"10203040"
+}
+###
+GET  /e-commerce-jaxrs/api/logout HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+LoginId: b5afb970-f142-46aa-b2ca-a9f3578f96e7
+###
+POST /e-commerce-jaxrs/api/login HTTP/1.1
+Host: localhost:9595
+Content-Type:application/json
+
+{
+	"email" :"mo@gmail.com",
+	"password" :"102030"
+}
+###
+POST /e-commerce-jaxrs/api/login HTTP/1.1
+Host: localhost:9595
+Content-Type:application/json
+
+{
+	"email" :"moalaa@gmail.com",
+	"password" :"102030"
+}
+###
+GET /e-commerce-jaxrs/api/products/search?pattern=ph HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+LoginId: b5afb970-f142-46aa-b2ca-a9f3578f96e7
+###
+POST /e-commerce-jaxrs/api/orders HTTP/1.1
+Host: localhost:9595
+Content-Type:  application/json
+LoginId: b5afb970-f142-46aa-b2ca-a9f3578f96e7
+
+
+[
+	{
+		"id":1,
+		"quantity":3
+	},
+	{
+		"id":2,
+		"quantity":1
+	}
+]
+###
+GET /e-commerce-jaxrs/api/products/1/category HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+###
+POST /e-commerce-jaxrs/api/login HTTP/1.1
+Host: localhost:9595
+Content-Type:application/json
+
+{
+	"email" :"moalaa@gmail.com",
+	"password" :"102030"
+}
+###
+POST /e-commerce-jaxrs/api/register HTTP/1.1
+Host: localhost:9595
+Content-Type:application/json
+
+{
+	
+	"name": "mostafa ali",
+	"email" : "mo@gmail.com",
+	"password" :"102030",
+	"gender": "male"
+
+}
+###
+GET /e-commerce-jaxrs/api/customers HTTP/1.1
+Host: localhost:9595
+Accept: application/xml
+LoginId: 8038688d-621a-4cdb-bab3-d560e51d234d
+###
+GET /e-commerce-jaxrs/api/customers HTTP/1.1
+Host: localhost:9595
+Accept: application/json
+LoginId: 8038688d-621a-4cdb-bab3-d560e51d234d
