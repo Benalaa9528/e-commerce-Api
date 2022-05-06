@@ -1,4 +1,4 @@
-package com.jets.customers;
+package com.jets.customers.rest;
 
 import java.util.List;
 

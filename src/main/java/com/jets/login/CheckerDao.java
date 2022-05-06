@@ -86,6 +86,13 @@ public class CheckerDao {
         Employees employee = query.setMaxResults(1).getSingleResult();
         return employee != null;
     }
+   public  Boolean findEmployeeById(int id){
+       var emp=em.find(Employees.class, id);
+       if(emp == null){
+           return false;
+       }
+        return true;
+    }
 
     public void beginTransaction() {
         em.getTransaction().begin();

@@ -1,4 +1,4 @@
-package com.jets.clerks;
+package com.jets.clerks.rest;
 
 import com.jets.clerks.dao.ClerkDao;
 import com.jets.clerks.dto.ClerkPostDto;
