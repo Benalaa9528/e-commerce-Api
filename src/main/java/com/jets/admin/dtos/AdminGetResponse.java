@@ -3,11 +3,11 @@ package com.jets.admin.dtos;
 import java.util.Date;
 
 public class AdminGetResponse {
-	public long id;
+	public int id;
 	public String name;
 	public Date dateOfBirth;
 	
-	public AdminGetResponse(long id, String name, Date dateOfBirth) {
+	public AdminGetResponse(int id, String name, Date dateOfBirth) {
 		this.id = id;
 		this.name = name;
 		this.dateOfBirth = dateOfBirth;
@@ -16,10 +16,10 @@ public class AdminGetResponse {
 	public AdminGetResponse() {
 	}
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {

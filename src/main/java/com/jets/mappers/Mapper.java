@@ -26,5 +26,7 @@ public class Mapper {
     public static CustomerGetDto convertCustomerEntityToCustomerDto(Customers customer){
         return new CustomerGetDto(customer.getId(),customer.getName(),customer.getEmail(),customer.getPassword());
     }
-    
+    public static AdminGetResponse convertAdminEntityToAdminDto(Employees admin){
+        return new AdminGetResponse(admin.getId(), admin.getName(), admin.getBirthdate());
+    }
 }

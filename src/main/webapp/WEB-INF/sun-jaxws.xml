@@ -19,4 +19,9 @@
     implementation="com.jets.clerks.soap.ClerkImpl"
     url-pattern="/ws/clerks" />
 
+    <endpoint
+    name="AdminkWebService"
+    implementation="com.jets.admin.soap.AdminImpl"
+    url-pattern="/ws/admins" />
+
 </endpoints>

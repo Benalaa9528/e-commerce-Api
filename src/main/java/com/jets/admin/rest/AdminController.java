@@ -23,6 +23,16 @@ import jakarta.ws.rs.core.Response;
 public class AdminController {
 
 	@GET
+	public Response getAllAdmins(){
+		AdminService service=new AdminService(new AdminDao());
+		var admins=service.getAllAdmins();
+		if(admins != null){
+			return  Response.ok().entity(admins).build();
+		}
+		return Response.status(Response.Status.FORBIDDEN).build();
+	}
+
+	@GET
 	@Path("{id}")
 	public Response getAdminProfile(@PathParam("id") int id,@HeaderParam("LoginId") String uuid) {
 		CheckerDao checkerDao = new CheckerDao();

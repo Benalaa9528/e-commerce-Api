@@ -1,9 +1,10 @@
 package com.jets.customers.soap;
 
-import java.util.List;
+
 
 import com.jets.customers.dao.CustomerDao;
 import com.jets.customers.dto.CustomerGetDto;
+import com.jets.customers.dto.XmlCustomers;
 import com.jets.login.CheckerDao;
 
 import jakarta.jws.WebService;
@@ -22,9 +23,12 @@ public class CustomerImpl implements Customer {
     }
 
     @Override
-    public List<CustomerGetDto> getAllCustomers() {
+    public XmlCustomers getAllCustomers() {
         CustomerDao customerDao = new CustomerDao();
-        return customerDao.getAllCustomers();
+        var customers= customerDao.getAllCustomers();
+        XmlCustomers xmlCustomers=new XmlCustomers();
+        xmlCustomers.setCustomers(customers);
+        return xmlCustomers;
     }
 
 }

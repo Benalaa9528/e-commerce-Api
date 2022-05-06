@@ -93,6 +93,14 @@ public class CheckerDao {
        }
         return true;
     }
+    public Employees getEmployeeById(int id){
+        var emp=em.find(Employees.class, id);
+        if(emp != null){
+            return emp;
+        }
+        return null;
+    }
+
     public  Customers findCustomerById(int id){
         var customer=em.find(Customers.class, id);
         if(customer != null){

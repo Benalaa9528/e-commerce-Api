@@ -1,0 +1,52 @@
+package com.jets.admin.soap;
+
+
+
+import com.jets.admin.dao.AdminDao;
+import com.jets.admin.dtos.AdminGetResponse;
+import com.jets.admin.dtos.AdminPutRequest;
+import com.jets.admin.dtos.Admins;
+import com.jets.admin.service.AdminService;
+import com.jets.login.CheckerDao;
+
+import jakarta.jws.WebService;
+@WebService(endpointInterface = "com.jets.admin.soap.Admin")
+public class AdminImpl implements Admin {
+
+    @Override
+    public AdminGetResponse getAdminProfile(int id) {
+        CheckerDao checkerDao = new CheckerDao();
+        var employee = checkerDao.getEmployeeById(id);
+        if (employee != null && employee.getRole().equalsIgnoreCase("admin")) {
+            AdminService service = new AdminService(new AdminDao());
+            return service.getAdminInfo(id);
+        }
+        return null;
+    }
+
+    @Override
+    public AdminGetResponse updateAdmin(int id, AdminPutRequest updateAdmin) {
+        CheckerDao checkerDao = new CheckerDao();
+        var employee = checkerDao.getEmployeeById(id);
+        if (employee != null && employee.getRole().equalsIgnoreCase("admin")) {
+            AdminService service = new AdminService(new AdminDao());
+            return service.updateAdminInfo(id, updateAdmin);
+        }
+        return null;
+    }
+
+    @Override
+    public Admins getAllAdmins() {
+            AdminService service=new AdminService(new AdminDao());
+            var admins=service.getAllAdmins();
+            Admins xmlAdmins=new Admins();
+            xmlAdmins.setAdmins(admins);
+            if(admins != null){
+                return  xmlAdmins;
+            }
+            return null;
+        }
+    }
+  
+
+

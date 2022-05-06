@@ -1,4 +1,5 @@
 com\jets\register\dao\RegisterDao.class
+com\jets\admin\soap\Admin.class
 com\jets\products\daos\ProductDao.class
 com\jets\login\LoginController.class
 com\jets\entity\Orders.class
@@ -48,6 +49,7 @@ com\jets\entity\Categories.class
 com\jets\customers\dto\CustomerGetDto.class
 com\jets\admin\dao\AdminDao.class
 com\jets\orders\rest\OrderController.class
+com\jets\admin\soap\AdminImpl.class
 com\jets\entity\Products.class
 com\jets\mappers\Mapper.class
 com\jets\entity\OrderDetails.class

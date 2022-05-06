@@ -1,10 +1,11 @@
 package com.jets.clerks.soap;
 
-import java.util.List;
+
 
 import com.jets.clerks.dao.ClerkDao;
 import com.jets.clerks.dto.ClerkDto;
 import com.jets.clerks.dto.ClerkPostDto;
+import com.jets.clerks.dto.Clerks;
 import com.jets.login.CheckerDao;
 
 import jakarta.jws.WebService;
@@ -12,11 +13,13 @@ import jakarta.jws.WebService;
 public class ClerkImpl implements Clerk {
 
     @Override
-    public List<ClerkDto> getAllClerks() {
+    public Clerks getAllClerks() {
         ClerkDao clerkDao = new ClerkDao();
         var clerks = clerkDao.getAllClerks();
+        Clerks xmlClerks=new Clerks();
+        xmlClerks.setClerks(clerks);
         if (clerks != null) {
-            return clerks;
+            return xmlClerks;
         }
         return null;
     }

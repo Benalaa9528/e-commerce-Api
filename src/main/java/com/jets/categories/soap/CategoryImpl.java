@@ -3,6 +3,7 @@ package com.jets.categories.soap;
 import java.util.List;
 
 import com.jets.categories.daos.CategoryDao;
+import com.jets.categories.dtos.Categories;
 import com.jets.categories.dtos.CategoryDto;
 import com.jets.products.dto.ProductDto;
 
@@ -12,11 +13,13 @@ import jakarta.jws.WebService;
 public class CategoryImpl implements Category {
 
     @Override
-    public List<CategoryDto> getAllCategories() {
+    public Categories getAllCategories() {
         CategoryDao categoryDao = new CategoryDao();
         var categories = categoryDao.getAllCategories();
+        Categories xmlCategories=new Categories();
+        xmlCategories.setCategories(categories);
         if(categories !=null){
-            return categories;
+            return xmlCategories;
         }
         return null;
     }
