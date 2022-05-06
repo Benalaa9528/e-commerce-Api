@@ -93,6 +93,13 @@ public class CheckerDao {
        }
         return true;
     }
+    public  Customers findCustomerById(int id){
+        var customer=em.find(Customers.class, id);
+        if(customer != null){
+            return customer;
+        }
+         return null;
+     }
 
     public void beginTransaction() {
         em.getTransaction().begin();

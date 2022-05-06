@@ -211,3 +211,18 @@ Content-Type: text/xml
        </iti:getAllProducts>
     </soap:Body>
 </soap:Envelope>
+###
+POST http://localhost:9595/e-commerce-jaxrs/ws/products HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:iti="http://soap.products.jets.com/">
+  
+    <soap:Body>
+       <iti:getAllProducts>
+          
+            
+       </iti:getAllProducts>
+    </soap:Body>
+</soap:Envelope>

@@ -9,4 +9,14 @@
     implementation="com.jets.categories.soap.CategoryImpl"
     url-pattern="/ws/categories" />
 
+    <endpoint
+    name="CustomerWebService"
+    implementation="com.jets.customers.soap.CustomerImpl"
+    url-pattern="/ws/customers" />
+
+    <endpoint
+    name="ClerkWebService"
+    implementation="com.jets.clerks.soap.ClerkImpl"
+    url-pattern="/ws/clerks" />
+
 </endpoints>

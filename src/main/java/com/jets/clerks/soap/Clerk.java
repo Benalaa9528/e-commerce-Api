@@ -5,7 +5,9 @@ import java.util.List;
 import com.jets.clerks.dto.ClerkDto;
 import com.jets.clerks.dto.ClerkPostDto;
 
+import jakarta.jws.WebService;
 
+@WebService
 public interface Clerk{
 
     public List<ClerkDto> getAllClerks();

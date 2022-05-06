@@ -7,6 +7,8 @@ import com.jets.clerks.dto.ClerkDto;
 import com.jets.clerks.dto.ClerkPostDto;
 import com.jets.login.CheckerDao;
 
+import jakarta.jws.WebService;
+@WebService(endpointInterface = "com.jets.clerks.soap.Clerk")
 public class ClerkImpl implements Clerk {
 
     @Override
