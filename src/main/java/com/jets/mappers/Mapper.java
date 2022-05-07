@@ -1,5 +1,6 @@
 package com.jets.mappers;
 
+
 import com.jets.admin.dtos.AdminGetResponse;
 import com.jets.categories.dtos.CategoryDto;
 import com.jets.clerks.dto.ClerkDto;
@@ -26,5 +27,7 @@ public class Mapper {
     public static CustomerGetDto convertCustomerEntityToCustomerDto(Customers customer){
         return new CustomerGetDto(customer.getId(),customer.getName(),customer.getEmail(),customer.getPassword());
     }
-    
+    public static AdminGetResponse convertAdminEntityToAdminDto(Employees admin){
+        return new AdminGetResponse(admin.getId(), admin.getName(), admin.getBirthdate());
+    }
 }

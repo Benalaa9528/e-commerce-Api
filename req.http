@@ -60,7 +60,7 @@ GET /e-commerce-jaxrs/api/categories/2 HTTP/1.1
 Host: localhost:9595
 Accept: application/json
 ###
-GET /e-commerce-jaxrs/api/categories/1/products HTTP/1.1
+GET /e-commerce-jaxrs/api/cproductsategories/1/ HTTP/1.1
 Host: localhost:9595
 Accept: application/json
 LoginId: b5afb970-f142-46aa-b2ca-a9f3578f96e7
@@ -73,7 +73,7 @@ GET /e-commerce-jaxrs/api/clerks/2 HTTP/1.1
 Host: localhost:9595
 Accept: application/json
 ###
-PUT	/e-commerce-jaxrs/api/clerks/2 HTTP/1.1
+PUT	/e-commerce-rest/api/clerks/2 HTTP/1.1
 Host: localhost:9595
 Content-Type:application/json
 
@@ -196,3 +196,33 @@ GET /e-commerce-jaxrs/api/customers HTTP/1.1
 Host: localhost:9595
 Accept: application/json
 LoginId: 8038688d-621a-4cdb-bab3-d560e51d234d
+###
+POST http://localhost:9595/e-commerce-jaxrs/ws/products HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:iti="http://soap.products.jets.com/">
+  
+    <soap:Body>
+       <iti:getAllProducts>
+          
+            
+       </iti:getAllProducts>
+    </soap:Body>
+</soap:Envelope>
+###
+POST http://localhost:9595/e-commerce-jaxrs/ws/products HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:iti="http://soap.products.jets.com/">
+  
+    <soap:Body>
+       <iti:getAllProducts>
+          
+            
+       </iti:getAllProducts>
+    </soap:Body>
+</soap:Envelope>

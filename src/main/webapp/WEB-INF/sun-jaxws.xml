@@ -1,7 +1,42 @@
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+  <endpoint
+    name="ProductWebService"
+    implementation="com.jets.products.soap.ProductManagementImpl"
+    url-pattern="/ws/products" />
+
+  <endpoint
+    name="CategoryWebService"
+    implementation="com.jets.categories.soap.CategoryImpl"
+    url-pattern="/ws/categories" />
+
     <endpoint
-     name="ProductWebService"
-      implementation="com.jets.products.soap.ProductManagementImpl"
-      url-pattern="/ws/products"/>
-      <endpoint />
-    </endpoints>
+    name="CustomerWebService"
+    implementation="com.jets.customers.soap.CustomerImpl"
+    url-pattern="/ws/customers" />
+
+    <endpoint
+    name="ClerkWebService"
+    implementation="com.jets.clerks.soap.ClerkImpl"
+    url-pattern="/ws/clerks" />
+
+    <!-- <endpoint
+    name="AdminWebService"
+    implementation="com.jets.admin.soap.AdminImpl"
+    url-pattern="/ws/admins" /> -->
+
+    <endpoint
+    name="RegisterWebService"
+    implementation="com.jets.register.soap.RegisterImpl"
+    url-pattern="/ws/register" />
+
+    <endpoint
+    name="LoginWebService"
+    implementation="com.jets.login.soap.LoginImpl"
+    url-pattern="/ws/login" />
+
+    <endpoint
+    name="LogoutWebService"
+    implementation="com.jets.logout.soap.LogOutImpl"
+    url-pattern="/ws/logout" />
+
+</endpoints>
