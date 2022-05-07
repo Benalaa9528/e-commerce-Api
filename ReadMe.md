@@ -19,7 +19,7 @@ An E-Commerce RESTful and SOAP web service using JAX-RS and JAX-WS Apis
 * Configure Tomcat in pom.xml file 
 * Deploy the application maven command:
 ```
-mvn clean compile tomcat7:redeploy
+mvn clean  tomcat7:redeploy
 ```
 
 
