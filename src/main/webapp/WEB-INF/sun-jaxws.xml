@@ -20,8 +20,11 @@
     url-pattern="/ws/clerks" />
 
     <endpoint
-    name="AdminkWebService"
+    name="AdminWebService"
     implementation="com.jets.admin.soap.AdminImpl"
     url-pattern="/ws/admins" />
-
+    <endpoint
+    name="RegisterWebService"
+    implementation="com.jets.register.soap.RegisterImpl"
+    url-pattern="/ws/register" />
 </endpoints>

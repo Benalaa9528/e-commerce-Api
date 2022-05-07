@@ -8,6 +8,7 @@ com\jets\categories\daos\CategoryDao.class
 com\jets\entity\OrderDetailsId.class
 com\jets\clerks\rest\ClerkController.class
 com\jets\clerks\dto\ClerkDto.class
+com\jets\clerks\dto\Clerks.class
 com\jets\customers\soap\Customer.class
 com\jets\admin\dtos\AdminPutRequest.class
 com\jets\categories\rest\CategoryController.class
@@ -33,8 +34,10 @@ com\jets\register\rest\RegisterController.class
 com\jets\products\soap\ProductManagementImpl.class
 com\jets\logout\rest\LogOutController.class
 com\jets\clerks\dto\ClerkPostDto.class
+com\jets\admin\dtos\Admins.class
 com\jets\products\dto\ProductDto.class
 com\jets\customers\dao\CustomerDao.class
+com\jets\categories\dtos\Categories.class
 com\jets\customers\soap\CustomerImpl.class
 com\jets\orders\dao\OrderDao.class
 com\jets\orders\dto\OrderItem.class

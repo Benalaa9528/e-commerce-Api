@@ -1,6 +1,7 @@
 E:\ecommerce-api\src\main\java\com\jets\categories\rest\CategoryController.java
 E:\ecommerce-api\src\main\java\com\jets\customers\soap\Customer.java
 E:\ecommerce-api\src\main\java\com\jets\orders\rest\OrderController.java
+E:\ecommerce-api\src\main\java\com\jets\admin\dtos\Admins.java
 E:\ecommerce-api\src\main\java\com\jets\categories\daos\CategoryDao.java
 E:\ecommerce-api\src\main\java\com\jets\products\soap\ProductManagementImpl.java
 E:\ecommerce-api\src\main\java\com\jets\logout\dao\LogOutDao.java
@@ -14,6 +15,8 @@ E:\ecommerce-api\src\main\java\com\jets\admin\dao\AdminDao.java
 E:\ecommerce-api\src\main\java\com\jets\categories\soap\Category.java
 E:\ecommerce-api\src\main\java\com\jets\entity\Employees.java
 E:\ecommerce-api\src\main\java\com\jets\logout\service\LogOutService.java
+E:\ecommerce-api\src\main\java\com\jets\categories\dtos\Categories.java
+E:\ecommerce-api\src\main\java\com\jets\clerks\dto\Clerks.java
 E:\ecommerce-api\src\main\java\com\jets\register\dto\RegisterDto.java
 E:\ecommerce-api\src\main\java\com\jets\admin\soap\AdminImpl.java
 E:\ecommerce-api\src\main\java\com\jets\admin\dtos\AdminPutRequest.java
