@@ -28,14 +28,14 @@ public class AdminImpl implements Admin {
     }
 
     @Override
-    public AdminGetResponse updateAdmin(int id, AdminPutRequest updateAdmin, String adminUuid) {
+    public AdminGetResponse updateAdmin(int id, AdminPutRequest updatedAdmin, String adminUuid) {
         CheckerDao checkerDao = new CheckerDao();
         var emp = checkerDao.getLoggedInEmployee(adminUuid);
         if (emp.getRole().equalsIgnoreCase("admin")) {
             var employee = checkerDao.getEmployeeById(id);
             if (employee != null && employee.getRole().equalsIgnoreCase("admin")) {
                 AdminService service = new AdminService(new AdminDao());
-                return service.updateAdminInfo(id, updateAdmin);
+                return service.updateAdminInfo(id, updatedAdmin);
             }
         }
         return null;

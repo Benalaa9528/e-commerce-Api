@@ -6,6 +6,8 @@ import com.jets.entity.Customers;
 import com.jets.login.dao.CheckerDao;
 import com.jets.login.dto.Credentials;
 
+import jakarta.jws.WebService;
+@WebService(endpointInterface = "com.jets.login.soap.Login")
 public class LoginImpl implements Login {
 
     @Override

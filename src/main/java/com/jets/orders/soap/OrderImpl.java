@@ -5,6 +5,8 @@ import java.util.List;
 import com.jets.orders.dao.OrderDao;
 import com.jets.orders.dto.OrderItem;
 
+import jakarta.jws.WebService;
+@WebService(endpointInterface = "com.jets.orders.soap.Order")
 public class OrderImpl implements Order {
 
     @Override

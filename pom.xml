@@ -139,6 +139,11 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
+                <configuration>
+                    <fork>true</fork>
+                    <meminitial>1024m</meminitial>
+                    <maxmem>20240m</maxmem>
+                  </configuration>
             </plugin>
 
             <plugin>
@@ -155,7 +160,7 @@
                     <username>alaa</username>
                     <password>alaa</password>
                     <url>http://localhost:9595/manager/text</url>
-                    <path>/e-commerce-jaxrs</path>
+                    <path>/e-commerce-rest</path>
                 </configuration>
             </plugin>
 

@@ -1,9 +1,12 @@
 package com.jets.products.soap;
 
+import java.util.List;
+
 import com.jets.categories.dtos.CategoryDto;
 import com.jets.login.dao.CheckerDao;
 import com.jets.products.daos.ProductDao;
 import com.jets.products.dto.ProductDto;
+import com.jets.products.dto.ProductPostDto;
 import com.jets.products.dto.XmlProducts;
 
 import jakarta.jws.WebService;
@@ -38,7 +41,7 @@ public class ProductManagementImpl implements ProductManagement {
                 return new ProductDto(product.getName(), product.getDescription(), product.getPrice(),
                         product.getImage());
         } catch (Exception e) {
-           
+
         }
         return null;
 
@@ -54,8 +57,48 @@ public class ProductManagementImpl implements ProductManagement {
             if (category != null)
                 return category;
         } catch (Exception e) {
-           
-           
+
+        }
+        return null;
+    }
+
+    @Override
+    public XmlProducts searchProductByPattern(String pattern, String uuid) {
+        CheckerDao checkerDao = new CheckerDao();
+        var customer = checkerDao.getLoggedInCustomer(uuid);
+        if (customer != null) {
+            ProductDao productDao = new ProductDao();
+            List<ProductDto> matchedProducts = productDao.searchProductsByPattern(pattern);
+            XmlProducts xmlProducts = new XmlProducts();
+            xmlProducts.setProducts(matchedProducts);
+            return xmlProducts;
+        }
+
+        return null;
+    }
+
+    @Override
+    public String addProduct(ProductPostDto productPostDto, String uuid) {
+        CheckerDao checkerDao = new CheckerDao();
+        var employee = checkerDao.getLoggedInEmployee(uuid);
+        if (employee.getRole().equalsIgnoreCase("admin")) {
+            ProductDao productDao = new ProductDao();
+            productDao.addProduct(productPostDto);
+            return "Product Is Added Successfully";
+        }
+        return "Failed To Add Product";
+
+    }
+
+    @Override
+    public String deleteProduct(int productId, String uuid) {
+        CheckerDao checkerDao = new CheckerDao();
+        var employee = checkerDao.getLoggedInEmployee(uuid);
+        if (employee.getRole().equalsIgnoreCase("admin")) {
+            ProductDao productDao = new ProductDao();
+            productDao.deleteProductById(productId);
+            return "Product Is Deleted ";
+
         }
         return null;
     }

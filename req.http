@@ -60,7 +60,7 @@ GET /e-commerce-jaxrs/api/categories/2 HTTP/1.1
 Host: localhost:9595
 Accept: application/json
 ###
-GET /e-commerce-jaxrs/api/categories/1/products HTTP/1.1
+GET /e-commerce-jaxrs/api/cproductsategories/1/ HTTP/1.1
 Host: localhost:9595
 Accept: application/json
 LoginId: b5afb970-f142-46aa-b2ca-a9f3578f96e7
@@ -73,7 +73,7 @@ GET /e-commerce-jaxrs/api/clerks/2 HTTP/1.1
 Host: localhost:9595
 Accept: application/json
 ###
-PUT	/e-commerce-jaxrs/api/clerks/2 HTTP/1.1
+PUT	/e-commerce-rest/api/clerks/2 HTTP/1.1
 Host: localhost:9595
 Content-Type:application/json
 

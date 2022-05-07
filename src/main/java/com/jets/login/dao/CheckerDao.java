@@ -68,14 +68,27 @@ public class CheckerDao {
 
         TypedQuery<Customers> query = em.createQuery("select c from Customers c where c.authtoken=:uuid",
                 Customers.class);
-        return query.setParameter("uuid", uuid).setMaxResults(1).getSingleResult();
+                
+                try {
+                    return query.setParameter("uuid", uuid).setMaxResults(1).getSingleResult();
+                } catch (Exception e) {
+                    //TODO: handle exception
+                    return null;
+                }
+        
     }
 
     public Employees getLoggedInEmployee(String uuid) {
 
         TypedQuery<Employees> query = em.createQuery("select E from Employees E where E.authtoken=:uuid",
                 Employees.class);
-        return query.setParameter("uuid", uuid).setMaxResults(1).getSingleResult();
+                try {
+                    return query.setParameter("uuid", uuid).setMaxResults(1).getSingleResult();
+                } catch (Exception e) {
+                    //TODO: handle exception
+                    return null;
+                }
+       
     }
 
     public Boolean isEmployee(String email, String password) {

@@ -19,9 +19,24 @@
     implementation="com.jets.clerks.soap.ClerkImpl"
     url-pattern="/ws/clerks" />
 
-    <endpoint
-    name="AdminkWebService"
+    <!-- <endpoint
+    name="AdminWebService"
     implementation="com.jets.admin.soap.AdminImpl"
-    url-pattern="/ws/admins" />
+    url-pattern="/ws/admins" /> -->
+
+    <endpoint
+    name="RegisterWebService"
+    implementation="com.jets.register.soap.RegisterImpl"
+    url-pattern="/ws/register" />
+
+    <endpoint
+    name="LoginWebService"
+    implementation="com.jets.login.soap.LoginImpl"
+    url-pattern="/ws/login" />
+
+    <endpoint
+    name="LogoutWebService"
+    implementation="com.jets.logout.soap.LogOutImpl"
+    url-pattern="/ws/logout" />
 
 </endpoints>
