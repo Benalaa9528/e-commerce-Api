@@ -9,8 +9,8 @@ import com.jets.admin.dtos.Admins;
 import jakarta.jws.WebService;
 @WebService
 public interface Admin {
-    public AdminGetResponse getAdminProfile(int id);
-    public AdminGetResponse updateAdmin(int id ,AdminPutRequest updateAdmin);
-    public Admins getAllAdmins();
+    public AdminGetResponse getAdminProfile(int id,String adminUuid);
+    public AdminGetResponse updateAdmin(int id ,AdminPutRequest updateAdmin,String adminUuid);
+    public Admins getAllAdmins(String adminUuid);
 
 }

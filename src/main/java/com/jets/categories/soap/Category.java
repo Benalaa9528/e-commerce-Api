@@ -10,9 +10,9 @@ import jakarta.jws.WebService;
 @WebService
 public interface Category {
     
-    public Categories getAllCategories();
-    public CategoryDto getCategoryById(int id);
-    public List<ProductDto> getCategoryProductsByCategoryId(int id);
+    public Categories getAllCategories(String customerUuid);
+    public CategoryDto getCategoryById(int id,String customerUuid);
+    public List<ProductDto> getCategoryProductsByCategoryId(int id,String customerUuid);
 
        
     

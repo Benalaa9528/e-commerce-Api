@@ -9,6 +9,6 @@ import jakarta.jws.WebService;
 @WebService
 public interface Customer {
     
-    public CustomerGetDto getCustomerById(int id);
-    public XmlCustomers getAllCustomers();
+    public CustomerGetDto getCustomerById(int id,String adminUuid);
+    public XmlCustomers getAllCustomers(String adminUuid);
 }

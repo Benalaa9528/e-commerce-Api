@@ -11,9 +11,9 @@ import jakarta.jws.WebService;
 @WebService
 public interface ProductManagement {
     
-    public XmlProducts getAllProducts();
-    public ProductDto getProductById(int id);
-    public CategoryDto getProductCategory(int id);
+    public XmlProducts getAllProducts(String uuid);
+    public ProductDto getProductById(int id,String uuid);
+    public CategoryDto getProductCategory(int id,String uuid);
 
 
 
