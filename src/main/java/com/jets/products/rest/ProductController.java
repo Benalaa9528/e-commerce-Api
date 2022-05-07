@@ -5,7 +5,7 @@ import java.util.List;
 import com.jets.categories.dtos.CategoryDto;
 import com.jets.entity.Categories;
 import com.jets.entity.Products;
-import com.jets.login.CheckerDao;
+import com.jets.login.dao.CheckerDao;
 import com.jets.mappers.Mapper;
 import com.jets.products.daos.ProductDao;
 import com.jets.products.dto.ProductDto;

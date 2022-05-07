@@ -1,0 +1,9 @@
+package com.jets.orders.soap;
+
+import java.util.List;
+
+import com.jets.orders.dto.OrderItem;
+
+public interface Order {
+    public String makeOrder(String customerUuid,List<OrderItem> items);
+}

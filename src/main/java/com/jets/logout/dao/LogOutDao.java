@@ -1,7 +1,7 @@
 package com.jets.logout.dao;
 
 import com.jets.factory.EntityManagerProvider;
-import com.jets.login.CheckerDao;
+import com.jets.login.dao.CheckerDao;
 
 import jakarta.persistence.EntityManager;
 

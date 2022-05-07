@@ -1,4 +1,4 @@
-package com.jets.login;
+package com.jets.login.dao;
 
 import com.jets.entity.Customers;
 import com.jets.entity.Employees;

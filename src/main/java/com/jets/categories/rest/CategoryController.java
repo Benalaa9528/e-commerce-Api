@@ -1,7 +1,7 @@
 package com.jets.categories.rest;
 
 import com.jets.categories.daos.CategoryDao;
-import com.jets.login.CheckerDao;
+import com.jets.login.dao.CheckerDao;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.HeaderParam;

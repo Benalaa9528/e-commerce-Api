@@ -6,7 +6,7 @@ import com.jets.clerks.dao.ClerkDao;
 import com.jets.clerks.dto.ClerkDto;
 import com.jets.clerks.dto.ClerkPostDto;
 import com.jets.clerks.dto.Clerks;
-import com.jets.login.CheckerDao;
+import com.jets.login.dao.CheckerDao;
 
 import jakarta.jws.WebService;
 @WebService(endpointInterface = "com.jets.clerks.soap.Clerk")

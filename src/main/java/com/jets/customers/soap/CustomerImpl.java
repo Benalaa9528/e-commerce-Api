@@ -5,7 +5,7 @@ package com.jets.customers.soap;
 import com.jets.customers.dao.CustomerDao;
 import com.jets.customers.dto.CustomerGetDto;
 import com.jets.customers.dto.XmlCustomers;
-import com.jets.login.CheckerDao;
+import com.jets.login.dao.CheckerDao;
 
 import jakarta.jws.WebService;
 @WebService(endpointInterface = "com.jets.customers.soap.Customer")

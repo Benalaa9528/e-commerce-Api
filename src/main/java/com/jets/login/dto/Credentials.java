@@ -1,4 +1,4 @@
-package com.jets.login;
+package com.jets.login.dto;
 
 public class Credentials {
     

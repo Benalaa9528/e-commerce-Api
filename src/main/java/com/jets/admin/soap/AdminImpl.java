@@ -7,7 +7,7 @@ import com.jets.admin.dtos.AdminGetResponse;
 import com.jets.admin.dtos.AdminPutRequest;
 import com.jets.admin.dtos.Admins;
 import com.jets.admin.service.AdminService;
-import com.jets.login.CheckerDao;
+import com.jets.login.dao.CheckerDao;
 
 import jakarta.jws.WebService;
 @WebService(endpointInterface = "com.jets.admin.soap.Admin")

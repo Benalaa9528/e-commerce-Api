@@ -1,9 +1,11 @@
-package com.jets.login;
+package com.jets.login.rest;
 
 import java.util.UUID;
 
 import com.jets.entity.Customers;
 import com.jets.entity.Employees;
+import com.jets.login.dao.CheckerDao;
+import com.jets.login.dto.Credentials;
 
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
